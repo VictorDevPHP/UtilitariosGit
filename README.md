@@ -320,10 +320,58 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
   </tbody>
 </table>
 
-## Contribuição ✨
+# Configuração da Chave SSH no GitHub
 
-Ajude a comunidade tornando este projeto ainda mais incrível. Leia como contribuir clicando **[aqui](https://github.com/iuricode/padroes-de-commits/blob/main/CONTRIBUTING.md)** e a **[licença](https://github.com/iuricode/padroes-de-commits/blob/main/LICENSE.md)**. Estou convencido de que juntos alcançaremos coisas incríveis!
+Aqui estão os passos para configurar uma chave SSH no GitHub:
 
-## Aprenda desenvolvimento frontend ❤️
+## 1. Geração da Chave SSH
 
-Este repositório é um projeto gratuito para a comunidade de desenvolvedores, mas você pode me ajudar comprando o meu ebook "**[eFront - Estudando frontend do zero](https://iuricode.com/efront)**" se estiver interessado em aprender ou melhorar suas habilidades de desenvolvimento frontend. A sua compra me ajuda a produzir e fornecer mais conteúdo gratuito para a comunidade. Adquira agora e comece sua jornada no desenvolvimento frontend.
+Se você ainda não tem uma chave SSH, você pode gerá-la usando o seguinte comando:
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "seu_email@example.com"
+```
+
+Substitua "seu_email@example.com" pelo seu endereço de e-mail.
+
+## 2. Iniciar o ssh-agent
+
+Inicie o ssh-agent em segundo plano:
+
+```bash
+eval $(ssh-agent -s)
+```
+
+## 3. Adicionar a Chave SSH ao ssh-agent
+
+Adicione sua chave SSH privada ao ssh-agent. Substitua "caminho_para_sua_chave" pelo caminho onde sua chave está localizada:
+
+```bash
+ssh-add caminho_para_sua_chave
+```
+
+## 4. Adicionar a Chave SSH à sua Conta do GitHub
+
+1. Copie o conteúdo da sua chave pública. Substitua "caminho_para_sua_chave" pelo caminho onde sua chave está localizada:
+
+```bash
+cat caminho_para_sua_chave.pub
+```
+
+2. Vá para as [configurações de SSH do GitHub](https://github.com/settings/keys).
+
+3. Clique em "New SSH key".
+
+4. Cole o conteúdo da sua chave pública no campo "Key".
+
+5. Clique em "Add SSH key".
+
+## 5. Testar a Conexão
+
+Você pode testar a conexão SSH com o GitHub usando o seguinte comando:
+
+```bash
+ssh -T git@github.com
+```
+
+Se tudo estiver configurado corretamente, você deve ver uma mensagem dizendo que você se autenticou com sucesso.
