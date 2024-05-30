@@ -347,7 +347,7 @@ eval $(ssh-agent -s)
 Adicione sua chave SSH privada ao ssh-agent. Substitua "caminho_para_sua_chave" pelo caminho onde sua chave está localizada:
 
 ```bash
-ssh-add caminho_para_sua_chave
+ssh-add caminho_para_sua_chave_ssh
 ```
 
 ## 4. Adicionar a Chave SSH à sua Conta do GitHub
