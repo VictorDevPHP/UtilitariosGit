@@ -344,7 +344,7 @@ eval $(ssh-agent -s)
 
 ## 3. Adicionar a Chave SSH ao ssh-agent
 
-Adicione sua chave SSH privada ao ssh-agent. Substitua "caminho_para_sua_chave" pelo caminho onde sua chave está localizada:
+Adicione sua chave SSH privada ao ssh-agent. Substitua "caminho_para_sua_chave" pelo caminho onde sua chave está localizada: 
 
 ```bash
 ssh-add caminho_para_sua_chave_ssh
