@@ -6,7 +6,7 @@ Esses commits auxiliarão você e sua equipe a entenderem de forma facilitada qu
 
 Essa identificação ocorre por meio de uma palavra e emoji que identifica se aquele commit realizado se trata de uma alteração de código, atualização de pacotes, documentação, alteração de visual, teste...
 
-## Tipo e descrição 🦄
+## Tipo e descrição 🦄 
 
 O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
 
